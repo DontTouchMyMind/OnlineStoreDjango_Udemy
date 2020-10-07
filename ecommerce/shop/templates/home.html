@@ -5,9 +5,14 @@
     <title>Home Page</title>
 </head>
 <body>
-    {% extends 'base.html' %}
-    {% block content %}
-    <h1>My home page</h1>
-    {% endblock %}
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <img src="{% static 'haders_image.jpg' %}">
+    </div>
+</div>
+{% endblock %}
 </body>
 </html>
