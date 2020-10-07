@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Product
+{% endblock %}
+{% block content %}
+    <div class="container py-5">
+        <div class="row mt-5">
+            <div class="col-10 mx-auto col-md-6 my-3">
+                <img src="{% static 'images/teddy.png' %}">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-10 mx-auto col-md-6 my-3">
+        <div>
+            <h1 class="product-title">Teddy bear</h1>
+            <p>$9.99</p>
+            <p class="product_desc">Product Description</p>
+            <p class="text-justify product_text">Lorem ipsum text</p>
+            <p class="text-justify product_text">Out of stock</p>
+        </div>
+    </div>
+{% endblock %}
