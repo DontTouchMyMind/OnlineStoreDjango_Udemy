@@ -46,24 +46,24 @@
                                 <br>
                                 Unit Price: $ {{ cart_item.product.price }}
                                 <br>
-                                Quantity: {{ cart_item.product.quantity }} * {{ cart_item.product.price }}
+                                Quantity: {{ cart_item.quantity }} * {{ cart_item.product.price }}
                             </td>
                             <td>
                                 $ {{ cart_item.sub_total }}
                             </td>
-                            {% if cart_item.quantity < cart_item.product_stock %}
-                            <td>
-                                <a href="{% url 'add_cart' cart_item.product.id %}"><i
-                                        class="material-icons cart-icon ">add_shopping_cart</i></a>
-                                <a href=""><i class="material-icons cart-icon ">remove_circle_outline</i></a>
-                                <a href=""><i class="material-icons cart-icon ">delete</i></a>
+                            {% if cart_item.quantity < cart_item.product.stock %}
+                                <td>
+                                    <a href="{% url 'add_cart' cart_item.product.id %}"><i
+                                            class="material-icons cart-icon ">add_shopping_cart</i></a>
+                                    <a href=""><i class="material-icons cart-icon ">remove_circle_outline</i></a>
+                                    <a href=""><i class="material-icons cart-icon ">delete</i></a>
                             </td>
                             {% else %}
                             <td>
                                 <a href=""><i class="material-icons cart-icon ">remove_circle_outline</i></a>
                                 <a href=""><i class="material-icons cart-icon ">delete</i></a>
                             </td>
-                            {% endnif %}
+                            {% endif %}
 
                         </tr>
                     {% endfor %}
