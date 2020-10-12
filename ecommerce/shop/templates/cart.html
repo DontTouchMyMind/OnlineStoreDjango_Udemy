@@ -55,14 +55,18 @@
                                 <td>
                                     <a href="{% url 'add_cart' cart_item.product.id %}"><i
                                             class="material-icons cart-icon ">add_shopping_cart</i></a>
-                                    <a href=""><i class="material-icons cart-icon ">remove_circle_outline</i></a>
+                                    <a href="{% url 'cart_remove' cart_item.product.id %}">
+                                        <i class="material-icons cart-icon ">remove_circle_outline</i>
+                                    </a>
                                     <a href=""><i class="material-icons cart-icon ">delete</i></a>
-                            </td>
+                                </td>
                             {% else %}
-                            <td>
-                                <a href=""><i class="material-icons cart-icon ">remove_circle_outline</i></a>
-                                <a href=""><i class="material-icons cart-icon ">delete</i></a>
-                            </td>
+                                <td>
+                                    <a href="{% url 'cart_remove' cart_item.product.id %}">
+                                        <i class="material-icons cart-icon ">remove_circle_outline</i>
+                                    </a>
+                                    <a href=""><i class="material-icons cart-icon ">delete</i></a>
+                                </td>
                             {% endif %}
 
                         </tr>
