@@ -5,7 +5,7 @@ from .models import Category, Product, Cart, CartItem
 from .forms import SignUpForm
 from django.contrib.auth.models import Group, User
 from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 
 
 def home(request, category_slug=None):
@@ -116,3 +116,8 @@ def loginView(request):
     else:
         form = AuthenticationForm()
     return render(request, 'login.html', {'form': form})
+
+
+def signoutVeiw(request):
+    logout(request)
+    return redirect('login')
