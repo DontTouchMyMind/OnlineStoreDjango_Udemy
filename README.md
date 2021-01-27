@@ -1,2 +1,4 @@
-# OnlineStoreDjango_Udemy
-Third django project
+# OnlineStoreDjango
+Это итоговая работа, выполнена по окончаю курса на образовательном портале Udemy.
+
+Премер онлайн магазина. В работе реализовано...
